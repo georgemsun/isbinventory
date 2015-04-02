@@ -1,0 +1,21 @@
+{
+  "name": "ISBInventoryApp",
+  "version": "0.0.0",
+  "homepage": "https://github.com/georgesun/isbinventory",
+  "authors": [
+    "Nelson Liu <nelson.liu.2009@gmail.com>"
+  ],
+  "description": "An inventory application for the Insitute of System Biology",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
