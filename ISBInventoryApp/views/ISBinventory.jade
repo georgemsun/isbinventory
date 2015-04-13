@@ -3,7 +3,23 @@ extends layout
 block content
     h1.
         ISB Inventory Item List
-    ul
-        each item, i in ISBinventory
-            li
-                p= item.Name
+
+    table
+      thead
+        tr
+          th Name
+          th CAS #
+          th Phy
+          th Size
+          th Type
+          th Location
+          th Notes
+      each item, i in ISBinventory
+        tr
+          td= item.Name
+          td= item.CAS
+          td= item.Phy
+          td= item.Size
+          td= item.Type
+          td= item.Location
+          td= item.Notes
