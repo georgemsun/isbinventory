@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1.
+        ISB Inventory Item List
+    ul
+        each item, i in ISBinventory
+            li
+                p= item.Name
