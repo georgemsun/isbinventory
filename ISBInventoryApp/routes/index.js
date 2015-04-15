@@ -17,7 +17,13 @@ router.get('/ISBinventory', function(req, res) {
     });
 });
 
+/* GET helloworld page. */
 router.get('/helloworld', function(req, res){
   res.render('helloworld', {title: 'Hello, World!'})
+});
+
+/* GET bootstrap test page. */
+router.get('/bootstraptest', function(req, res){
+  res.render('bootstraptest', {title: 'bootstrap test'})
 });
 module.exports = router;
