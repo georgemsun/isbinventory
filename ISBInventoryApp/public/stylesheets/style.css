@@ -7,7 +7,11 @@ a {
   color: #00B7FF;
 }
 
-td .editpencil {
+td .saveEditButton {
   float: right;
   display: none;
+}
+
+td .button-active{
+  display: inline-block !important;
 }
