@@ -3,6 +3,9 @@ extends layout
 block content
     h1.
         ISB Inventory Item List
+    button.btn.btn-primary(type="button") Add Item
+    br
+    br
     div.table-responsive
       table.table.table-bordered.table-striped
         thead
@@ -16,17 +19,17 @@ block content
             th Notes
         each item, i in ISBinventory
           tr
-            td.inventorycell= item.Name
+            td.inventorycell(contenteditable="False")= item.Name
               i.saveEditButton.fa.fa-pencil
-            td.inventorycell= item.CAS
+            td.inventorycell(contenteditable="False")= item.CAS
               i.saveEditButton.fa.fa-pencil
-            td.inventorycell= item.Phy
+            td.inventorycell(contenteditable="False")= item.Phy
               i.saveEditButton.fa.fa-pencil
-            td.inventorycell= item.Size
+            td.inventorycell(contenteditable="False")= item.Size
               i.saveEditButton.fa.fa-pencil
-            td.inventorycell= item.Type
+            td.inventorycell(contenteditable="False")= item.Type
               i.saveEditButton.fa.fa-pencil
-            td.inventorycell= item.Location
+            td.inventorycell(contenteditable="False")= item.Location
               i.saveEditButton.fa.fa-pencil
-            td.inventorycell= item.Notes
+            td.inventorycell(contenteditable="False")= item.Notes
               i.saveEditButton.fa.fa-pencil
