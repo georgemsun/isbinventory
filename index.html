@@ -13,13 +13,13 @@
 				$(document).keyPress(function(event) {
 					if(event.which === 77) {
 						var currentItem = $('.row-selected');
-						var previousItem = currentItem.previous();
+						var previousItem = currentItem.prev('tr');
 						currentItem.removeClass('row-selected');
 						previousItem .addClass('row-selected');
 					}
 					else if(event.which === 73) {
 						var currentItem = $('.row-selected');
-						var nextItem = currentItem.next();
+						var nextItem = currentItem.next('tr');
 						currentItem.removeClass('row-selected');
 						nextItem.addClass('row-selected');
 					}
@@ -33,16 +33,16 @@
 
 		<div class="container">
 			<div class="header">
-				<h1>Chemical Inventory</h1>
+				<h1>Institute for Systems Biology &ndash; Chemical Inventory</h1>
 				<input type="search" class="light-table-filter" data-table="order-table" id="search-name" placeholder="Name">
-				<input type="search" class="light-table-filter" data-table="order-table" placeholder="CAS">
-				<input type="search" class="light-table-filter" data-table="order-table" placeholder="Location">
+				<input type="search" class="light-table-filter" data-table="order-table" id="search-cas" placeholder="CAS">
+				<input type="search" class="light-table-filter" data-table="order-table" id="search-location" placeholder="Location">
 			</div>
 
 			<div class="table">
 				<table>
 					<thead>
-						<tr class="freeze">
+						<tr class="table-head">
 							<th>Name</th>
 							<th>CAS</th>
 							<th>Phy</th>
