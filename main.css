@@ -2,16 +2,20 @@ body {
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
 }
-
 .tagline {
 	background: url('http://www.lancefarrow.ca/wp-content/uploads/2014/06/triangle-background-17.png');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	height: 100%;
 	width: 100%;
 	position: fixed;
 	z-index: -1;
 }
 .container {
-	padding: 10px;
+	padding: 30px;
+	padding-top: 15px;
 }
 
 /*SEARCH CSS*/
@@ -22,37 +26,43 @@ input {
 	border: 1px solid rgba(101,195,209,0.5);
 	border-radius: 3px;
 	background-color: rgba(255,255,255,0.6);
-	
+	padding: 10px;
 }
 input[type=search]:focus {
 	outline: none;
 	border: 1px solid rgba(101,195,209,1);
+	font-weight: bold;
 }
 ::-webkit-input-placeholder {
-	color: rgba(101,195,209,0.5);
+	color: rgba(101,195,209,1);
 }
 ::-moz-input-placeholder {
-	color: rgba(101,195,209,0.5);
+	color: rgba(101,195,209,0.9);
+}
+#search-name {
+	width: 60%;
+}
+#search-cas {
+	width: 15%;
+}
+#search-location {
+	width: 20%;
 }
 
 .header {
 	width: 100%;
-	height: 25px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 }
-
 h1 {
 	text-transform: uppercase;
 	font-family: 'Open Sans', sans-serif;
 }
 
 .table {
-	
+	height: 80%;
+	overflow-y: auto;
 }
 table {
-	padding-top: 10px;
-	padding-bottom: 20px;
 	font-size: 13px;
 	width: 100%;
 }
@@ -62,9 +72,15 @@ td, th {
 tr {
 	background-color: rgba(255,255,255,0.4);
 }
-tr:hover {
-	background-color: rgba(101,195,209,0.6);
+.table-head {
+	background-color: rgba(255,255,255,0.6);
+}
+tr:not(.table-head):hover {
+	background-color: rgba(110,72,181,0.7); /*rgba(101,195,209,0.6)*/
+	color: white;
+	font-weight: bold;
 }
 .row-selected {
-	background-color: rgba(101,195,209,0.2);
+	background-color: rgba(110,72,181,0.3); /*rgba(101,195,209,0.5)*/
+	font-weight: bold;
 }
