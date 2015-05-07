@@ -31,7 +31,7 @@ input {
 input[type=text]:focus {
 	outline: none;
 	border: 1px solid rgba(101,195,209,1);
-	font-weight: bold;
+	/*font-weight: bold;*/
 }
 ::-webkit-input-placeholder {
 	color: rgba(101,195,209,1);
