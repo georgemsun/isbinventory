@@ -6,23 +6,21 @@
 		
 		<script type="text/javascript">
 			$(document).ready(function() {
+				<!--row-selected-->
 				$('tr').click(function() {
 					$('tr').removeClass('row-selected');
 					$(this).addClass('row-selected');
 				});
-				$(document).keyPress(function(event) {
-					if(event.which === 77) {
-						var currentItem = $('.row-selected');
-						var previousItem = currentItem.prev('tr');
-						currentItem.removeClass('row-selected');
-						previousItem .addClass('row-selected');
-					}
-					else if(event.which === 73) {
-						var currentItem = $('.row-selected');
-						var nextItem = currentItem.next('tr');
-						currentItem.removeClass('row-selected');
-						nextItem.addClass('row-selected');
-					}
+				<!--search-->
+				$('#search-name').keyup(function() {
+					_this = this;
+					$.each($('#table tbody').find('tr'), function() {
+						console.log($(this).text());
+						if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1)
+							$(this).hide();
+						else
+							$(this).show();
+					});
 				});
 			});
 		</script>
@@ -34,13 +32,13 @@
 		<div class="container">
 			<div class="header">
 				<h1>Institute for Systems Biology &ndash; Chemical Inventory</h1>
-				<input type="search" class="light-table-filter" data-table="order-table" id="search-name" placeholder="Name">
-				<input type="search" class="light-table-filter" data-table="order-table" id="search-cas" placeholder="CAS">
-				<input type="search" class="light-table-filter" data-table="order-table" id="search-location" placeholder="Location">
+				<input type="text" data-table="order-table" id="search-name" placeholder="Name">
+				<input type="text" data-table="order-table" id="search-cas" placeholder="CAS">
+				<input type="text" data-table="order-table" id="search-location" placeholder="Location">
 			</div>
 
 			<div class="table">
-				<table>
+				<table id="table">
 					<thead>
 						<tr class="table-head">
 							<th>Name</th>
