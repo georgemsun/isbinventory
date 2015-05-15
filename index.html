@@ -24,19 +24,55 @@
 							$(this).show();
 					});
 				});
+				
+				$('.fade').hide();
+				$('.add-chemical').hide();
+				$('#search-add').click(function() {
+					$('.fade').fadeIn('fast');
+					$('.add-chemical').fadeIn('fast');
+				});
+				$('.fade, #add-chemical-submit').click(function() {
+					$('.fade').fadeOut('fast');
+					$('.add-chemical').fadeOut('fast');
+				});
 			});
 		</script>
-
 	</head>
 	<body>
 		<div class="tagline"></div>
-
+		
+		<div class="fade"></div>
+		
+		<div class="add-chemical-container">
+			<div class="add-chemical">
+				<h3>Add Chemical</h3>
+				<input type="text" id= "add-name" placeholder="Name">
+				<input type="text" id= "add-location" placeholder="Location">
+				<input type="text" id= "add-notes" placeholder="Notes">
+				<select id="add-phy">
+					<option value="" disabled selected>Physical State</option>
+					<option value="S">Solid</option>
+					<option value="L">Liquid</option>
+				</select>
+				<select id="add-type">
+					<option value="" disabled selected>Bottle Type</option>
+					<option value="P">Plastic</option>
+					<option value="G">Glass</option>
+				</select>
+				<input type="text" id= "add-size" placeholder="Size">
+				<input type="text" id= "add-cas" placeholder="CAS">
+				</br>
+				<button type="button" id="add-chemical-submit">Add Chemical</button>
+			</div>
+		</div>
+		
 		<div class="container">
 			<div class="header">
 				<h1>Moritz Lab &ndash; Chemical Inventory</h1>
 				<input type="text" data-table="order-table" id="search-name" placeholder="Name">
 				<input type="text" data-table="order-table" id="search-cas" placeholder="CAS">
 				<input type="text" data-table="order-table" id="search-location" placeholder="Location">
+				<button type="button" id="search-add">Add Chemical</button>
 			</div>
 
 			<div class="table">
@@ -44,12 +80,12 @@
 					<thead>
 						<tr class="table-head">
 							<th>Name</th>
-							<th>CAS</th>
-							<th>Phy</th>
-							<th>Size</th> 
-							<th>Type</th>
-							<th>Notes</th>
 							<th>Location</th>
+							<th>Size</th> 
+							<th>Notes</th>
+							<th>Physical</br>State</th>
+							<th>Bottle</br>Type</th>
+							<th>CAS</th>
 						</tr>
 					</thead>
 					<tbody>
