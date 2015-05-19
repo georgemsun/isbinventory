@@ -52,7 +52,7 @@ select {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 15px;
 	height: 30px;
-	padding: 0px 0px 0px 10px;
+	padding: 0px 0px 0px 6px;
 }
 select:focus {
 	outline: none;
@@ -74,7 +74,7 @@ select:focus {
 #search-name {	width: 35%;}
 #search-cas {	width: 10%;}
 #search-location {	width: 15%;}
-#search-add {
+#search-add-edit {
 	width: 10%;
 	float: right;
 }
@@ -86,7 +86,7 @@ select:focus {
 	position: fixed;
 	z-index: 1;
 }
-.add-chemical {
+.add-chemical, .edit-chemical {
 	padding: 40px 40px 50px 40px;
 	width: 1000px;
 	background-color: white;
@@ -113,6 +113,35 @@ select:focus {
 	background-color: rgba(101,195,209,0.5);
 	color: white;
 }
+.edit-chemical button[type=button] {
+	outline: none;
+	padding: 0px;
+	background-color: rgba(101,195,209,0.5);
+	color: white;
+}
+.edit-chemical button[type=button]:hover {
+	background-color: rgba(101,195,209,0.8);
+	color: white;
+}
+.edit-chemical button[type=button]:active {
+	background-color: rgba(101,195,209,0.5);
+	color: white;
+}
+.delete-chemical-submit button[type=button] {
+	outline: none;
+	padding: 0px;
+	background-color: rgba(178,178,178,0.5);
+	color: white;
+	border: 1px solid rgba(178,178,178,0.5);
+}
+.delete-chemical-submit button[type=button]:hover {
+	background-color: rgba(255,25,25,0.8);
+	color: white;
+}
+.delete-chemical-submit button[type=button]:active {
+	background-color: rgba(255,25,25,0.5);
+	color: white;
+}
 #add-name {	width: 100%;}
 #add-location {	width: 100%;}
 #add-notes {	width: 100%;}
@@ -120,10 +149,13 @@ select:focus {
 #add-type {	width: 20%;}
 #add-size {	width: 20%;}
 #add-cas {	width: 20%;}
-#add-chemical-submit {
-	float: right;
+#add-chemical-submit, #edit-chemical-submit {
 	width: 100%;
 	margin-top: 20px;
+}
+#delete-chemical-submit {
+	width: 100%;
+	margin-top: 10px;
 }
 
 .header {
