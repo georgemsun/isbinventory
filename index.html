@@ -27,13 +27,29 @@
 				
 				$('.fade').hide();
 				$('.add-chemical').hide();
-				$('#search-add').click(function() {
+				$('.edit-chemical').hide();
+				$('#search-add-edit').click(function() {
 					$('.fade').fadeIn('fast');
 					$('.add-chemical').fadeIn('fast');
 				});
-				$('.fade, #add-chemical-submit').click(function() {
+				$('.add-chemical h3').click(function() {
+					$('.add-chemical').fadeOut('fast');
+					$('.edit-chemical').fadeIn('fast');
+				});
+				$('.edit-chemical h3').click(function() {
+					$('.edit-chemical').fadeOut('fast');
+					$('.add-chemical').fadeIn('fast');
+				});
+				$('.fade, #add-chemical-submit, #edit-chemical-submit').click(function() {
 					$('.fade').fadeOut('fast');
 					$('.add-chemical').fadeOut('fast');
+					$('.edit-chemical').fadeOut('fast');
+				});
+				$('#add-chemical-submit').click(function() {
+					//Code that adds it
+				});
+				$('#edit-chemical-submit').click(function() {
+					//Code that edits it
 				});
 			});
 		</script>
@@ -45,7 +61,7 @@
 		
 		<div class="add-chemical-container">
 			<div class="add-chemical">
-				<h3>Add Chemical</h3>
+				<h3>Add Chemical<span style="color: #CCCCCC"> / Edit Chemical</span></h3>
 				<input type="text" id= "add-name" placeholder="Name">
 				<input type="text" id= "add-location" placeholder="Location">
 				<input type="text" id= "add-notes" placeholder="Notes">
@@ -62,7 +78,34 @@
 				<input type="text" id= "add-size" placeholder="Size">
 				<input type="text" id= "add-cas" placeholder="CAS">
 				</br>
+				
 				<button type="button" id="add-chemical-submit">Add Chemical</button>
+			</div>
+			<div class="edit-chemical">
+				<h3>Edit Chemical<span style="color: #CCCCCC"> / Add Chemical</span></h3>
+				<select id= "add-name">
+					<option value="" disabled selected>Name</option>
+				</select>
+				<input type="text" id= "add-location" placeholder="Location">
+				<input type="text" id= "add-notes" placeholder="Notes">
+				<select id="add-phy">
+					<option value="" disabled selected>Physical State</option>
+					<option value="S">Solid</option>
+					<option value="L">Liquid</option>
+				</select>
+				<select id="add-type">
+					<option value="" disabled selected>Bottle Type</option>
+					<option value="P">Plastic</option>
+					<option value="G">Glass</option>
+				</select>
+				<input type="text" id= "add-size" placeholder="Size">
+				<input type="text" id= "add-cas" placeholder="CAS">
+				</br>
+				
+				<button type="button" id="edit-chemical-submit">Edit Chemical</button>
+				<div class="delete-chemical-submit">
+					<button type="button" id="delete-chemical-submit">Delete Chemical</button>
+				</div>
 			</div>
 		</div>
 		
@@ -72,7 +115,7 @@
 				<input type="text" data-table="order-table" id="search-name" placeholder="Name">
 				<input type="text" data-table="order-table" id="search-cas" placeholder="CAS">
 				<input type="text" data-table="order-table" id="search-location" placeholder="Location">
-				<button type="button" id="search-add">Add Chemical</button>
+				<button type="button" id="search-add-edit">Add/Edit Chemical</button>
 			</div>
 
 			<div class="table">
