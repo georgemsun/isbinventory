@@ -135,11 +135,11 @@ select:focus {
 	border: 1px solid rgba(178,178,178,0.5);
 }
 .delete-chemical-submit button[type=button]:hover {
-	background-color: rgba(255,25,25,0.8);
+	background-color: rgba(209,25,25,0.8);
 	color: white;
 }
 .delete-chemical-submit button[type=button]:active {
-	background-color: rgba(255,25,25,0.5);
+	background-color: rgba(209,25,25,0.5);
 	color: white;
 }
 #add-name {	width: 100%;}
