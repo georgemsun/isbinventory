@@ -18,7 +18,7 @@ body {
 	padding-top: 15px;
 }
 
-/*SEARCH CSS*/
+/* SEARCH CSS */
 input, button, select {
 	outline: none;
 	border: 1px solid rgba(101,195,209,0.5);
@@ -30,6 +30,12 @@ input, button, select {
 	padding: 10px;
 	vertical-align: bottom;
 	margin-bottom: 5px;
+}
+input {
+	cursor: text;
+}
+button, select {
+	cursor: pointer; cursor: hand;
 }
 input[type=text]:focus {
 	outline: none;
@@ -99,6 +105,9 @@ select:focus {
 	top: 50%;
 	margin-top: -175px;
 }
+.add-chemical-container h3:hover {
+	cursor: pointer; cursor: hand;
+}
 .add-chemical button[type=button] {
 	outline: none;
 	padding: 0px;
@@ -158,6 +167,7 @@ select:focus {
 	margin-top: 10px;
 }
 
+/* HEADER CSS */
 .header {
 	width: 100%;
 	padding-bottom: 20px;
@@ -167,6 +177,7 @@ h1 {
 	font-family: 'Open Sans', sans-serif;
 }
 
+/* TABLE CSS */
 .table {
 	height: 80%;
 	overflow-y: auto;
@@ -191,6 +202,7 @@ tr:not(.table-head):hover {
 	background-color: rgba(110,72,181,0.7); /*rgba(101,195,209,0.6)*/
 	color: white;
 	font-weight: bold;
+	cursor: pointer; cursor: hand;
 }
 .row-selected {
 	background-color: rgba(110,72,181,0.3); /*rgba(101,195,209,0.5)*/
