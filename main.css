@@ -81,7 +81,7 @@ select:focus {
 #search-cas {	width: 10%;}
 #search-location {	width: 15%;}
 #search-add-edit {
-	width: 10%;
+	width: 200px;
 	float: right;
 }
 
