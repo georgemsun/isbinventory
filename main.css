@@ -77,7 +77,7 @@ select:focus {
 	background-color: rgba(101,195,209,0.3);
 	color: white;
 }
-#search-name {	width: 35%;}
+#search-name {	width: 70%;}
 #search-cas {	width: 10%;}
 #search-location {	width: 15%;}
 #search-add-edit {
