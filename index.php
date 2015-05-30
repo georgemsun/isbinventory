@@ -6,6 +6,12 @@
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400' rel='stylesheet' type='text/css'>
 		
+		<?php
+			$tab = "	";
+			$filename = "tsv.txt";
+			$file = fopen($filename, 'r') or die("Unable to open inventory file! If this message appears after reloading, try locating '" . $filename . "'");
+		?>
+		
 		<script type="text/javascript">
 			$(document).ready(function() {
 				<!--row-selected-->
@@ -25,6 +31,9 @@
 					});
 				});
 				
+				<!--set for csv or tsv-->
+				var tab = "	";
+				
 				$('.fade').hide();
 				$('.add-chemical').hide();
 				$('.edit-chemical').hide();
@@ -34,28 +43,83 @@
 				});
 				$('.add-chemical h3').click(function() {
 					$('.add-chemical').fadeOut('fast');
+					$('.edit-chemical #error').css("display", "none");
 					$('.edit-chemical').fadeIn('fast');
 				});
 				$('.edit-chemical h3').click(function() {
 					$('.edit-chemical').fadeOut('fast');
+					$('.add-chemical #error').css("display", "none");
 					$('.add-chemical').fadeIn('fast');
-				});
-				$('.fade, #add-chemical-submit, #edit-chemical-submit, #delete-chemical-submit').click(function() {
-					$('.fade').fadeOut('fast');
-					$('.add-chemical').fadeOut('fast');
-					$('.edit-chemical').fadeOut('fast');
 				});
 				$('#add-chemical-submit').click(function() {
 					//Code
-					$('.troubleshooting').html("ADD WAS SELECTED");
+					if($('#add-name').val() == "" || $('#add-location').val() == "") {
+						$('.add-chemical #error').css("display", "block");
+					}
+					else {
+						var add_string = $('#add-name').val() + tab + $('#add-location').val() + tab + $('#add-size').val() + tab + $('#add-notes').val() + tab + $('#add-phy').val() + tab + $('#add-type').val()+ tab + $('#add-cas').val() + tab;
+						$('.troubleshooting').html("<strong>ADDED THE FOLLOWING: </strong>" + add_string);
+						
+						$('.fade').fadeOut('fast');
+						$('.add-chemical').fadeOut('fast');
+						$('.add-chemical #error').css("display", "none");
+						$('#add-name, #add-location, #add-notes, #add-phy, #add-type, #add-size, #add-cas').val('');
+					}
 				});
 				$('#edit-chemical-submit').click(function() {
 					//Code
-					$('.troubleshooting').html("EDIT WAS SELECTED");
+					if($('#edit-name').val() == "") {
+						$('.edit-chemical #error').css("display", "block");
+					}
+					else {
+						var edit_string = $('#edit-name').val() + tab + $('#edit-location').val() + tab + $('#edit-size').val() + tab + $('#edit-notes').val() + tab + $('#edit-phy').val() + tab + $('#edit-type').val()+ tab + $('#edit-cas').val() + tab;
+						$('.troubleshooting').html("<strong>EDITED THE FOLLOWING: </strong>" + edit_string);
+						
+						$('.fade').fadeOut('fast');
+						$('.edit-chemical').fadeOut('fast');
+						$('.edit-chemical #error').css("display", "none");
+						$('#edit-name, #edit-location, #edit-notes, #edit-phy, #edit-type, #edit-size, #edit-cas').val('');
+					}
 				});
 				$('#delete-chemical-submit').click(function() {
 					//Code
-					$('.troubleshooting').html("DELETE WAS SELECTED");
+					if($('#edit-name').val() == "") {
+						$('.edit-chemical #error').css("display", "block");
+					}
+					else {
+						var edit_string = $('#edit-name').val() + tab + $('#edit-location').val() + tab + $('#edit-size').val() + tab + $('#edit-notes').val() + tab + $('#edit-phy').val() + tab + $('#edit-type').val()+ tab + $('#edit-cas').val() + tab;
+						$('.troubleshooting').html("<strong>DELETED THE FOLLOWING: </strong>" + edit_string);
+						
+						$('.fade').fadeOut('fast');
+						$('.edit-chemical').fadeOut('fast');
+						$('.edit-chemical #error').css("display", "none");
+						$('#edit-name, #edit-location, #edit-notes, #edit-phy, #edit-type, #edit-size, #edit-cas').val('');
+					}
+				});
+				$('.fade').click(function() {
+					$('.fade').fadeOut('fast');
+					$('.add-chemical').fadeOut('fast');
+					$('.add-chemical #error').css("display", "none");
+					$('#add-name, #add-location, #add-notes, #add-phy, #add-type, #add-size, #add-cas').val('');
+					$('.edit-chemical').fadeOut('fast');
+					$('.edit-chemical #error').css("display", "none");
+					$('#edit-name, #edit-location, #edit-notes, #edit-phy, #edit-type, #edit-size, #edit-cas').val('');
+				});
+				
+				$('#edit-name').change(function () {
+					$('.troubleshooting').html("<strong>SELECTED THE FOLLOWING: </strong>" + $('#edit-name').val());
+					<?php
+						$file = fopen($filename, 'r') or die("Unable to open inventory file! If this message appears after reloading, try locating '" . $filename . "'");
+						//set php to read through text file and autocomplete details about selection
+						//while (($line = fgets($file)) !== false) {	
+						//}
+					?>
+					$('#edit-location').val('');
+					$('#edit-notes').val('');
+					$('#edit-phy').val('');
+					$('#edit-type').val('');
+					$('#edit-size').val('');
+					$('#edit-cas').val('');
 				});
 			});
 		</script>
@@ -80,7 +144,7 @@
 		<meta name="theme-color" content="#ffffff">
 	</head>
 	<body>
-		<!--<span class="troubleshooting">IGNORE FOR NOW</span>-->
+		<span class="troubleshooting" style="font-size: 20px"></span>
 		
 		<div class="tagline"></div>
 		
@@ -107,48 +171,52 @@
 				</br>
 				
 				<button type="button" id="add-chemical-submit">Add Chemical</button>
+				<p id="error">Please include at least a name and a location.</p>
 			</div>
 			<div class="edit-chemical">
 				<h3>Edit Chemical<span style="color: #CCCCCC"> / Add Chemical</span></h3>
-				<select id= "add-name">
+				<select id= "edit-name">
 					<option value="" disabled selected>Name</option>
+					<?php
+						$file = fopen($filename, 'r') or die("Unable to open inventory file! If this message appears after reloading, try locating '" . $filename . "'");
+						while (($line = fgets($file)) !== false) {
+							$name = substr($line, 0, strpos($line, $tab));
+							echo "<option value=\"" . $name . "\">" . $name . "</option>";
+						}
+					?>
 				</select>
-				<input type="text" id= "add-location" placeholder="Location">
-				<input type="text" id= "add-notes" placeholder="Notes">
-				<select id="add-phy">
+				<input type="text" id= "edit-location" placeholder="Location">
+				<input type="text" id= "edit-notes" placeholder="Notes">
+				<select id="edit-phy">
 					<option value="" disabled selected>Physical State</option>
 					<option value="S">Solid</option>
 					<option value="L">Liquid</option>
 				</select>
-				<select id="add-type">
+				<select id="edit-type">
 					<option value="" disabled selected>Bottle Type</option>
 					<option value="P">Plastic</option>
 					<option value="G">Glass</option>
 				</select>
-				<input type="text" id= "add-size" placeholder="Size">
-				<input type="text" id= "add-cas" placeholder="CAS">
+				<input type="text" id= "edit-size" placeholder="Size">
+				<input type="text" id= "edit-cas" placeholder="CAS">
 				</br>
 				
 				<button type="button" id="edit-chemical-submit">Edit Chemical</button>
 				<div class="delete-chemical-submit">
 					<button type="button" id="delete-chemical-submit">Delete Chemical</button>
 				</div>
+				<p id="error">Please select a chemical to edit or delete.</p>
 			</div>
 		</div>
 		
 		<div class="container">
 			<div class="header">
 				<h1>Moritz Lab &ndash; Chemical Inventory</h1>
-				<input type="text" data-table="order-table" id="search-name" placeholder="Name">
+				<input type="text" data-table="order-table" id="search-name" placeholder="Type here to search">
 				<!--<input type="text" data-table="order-table" id="search-cas" placeholder="CAS">
 				<input type="text" data-table="order-table" id="search-location" placeholder="Location">-->
 				<button type="button" id="search-add-edit">Add/Edit Chemical</button>
 			</div>
-			
-			<?php
-				$filename = "tsv.txt";
-				$file = fopen($filename, "r") or die("Unable to open inventory file! If this message appears after reloading, try locating '" . $filename . "'");
-			?>
 			
 			<div class="table">
 				<table id="table">
@@ -165,7 +233,7 @@
 					</thead>
 					<tbody>
 						<?php
-							$tab = "	";
+							$file = fopen($filename, 'r') or die("Unable to open inventory file! If this message appears after reloading, try locating '" . $filename . "'");
 							while (($line = fgets($file)) !== false) {
 								echo "<tr>";
 									echo "<td id=\"name\">" . substr($line, 0, strpos($line, $tab)) . "</td>";
