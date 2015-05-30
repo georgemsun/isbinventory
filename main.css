@@ -151,13 +151,13 @@ select:focus {
 	background-color: rgba(209,25,25,0.5);
 	color: white;
 }
-#add-name {	width: 100%;}
-#add-location {	width: 100%;}
-#add-notes {	width: 100%;}
-#add-phy {	width: 20%;}
-#add-type {	width: 20%;}
-#add-size {	width: 20%;}
-#add-cas {	width: 20%;}
+#add-name, #edit-name {	width: 100%;}
+#add-location, #edit-location {	width: 100%;}
+#add-notes, #edit-notes {	width: 100%;}
+#add-phy, #edit-phy {	width: 20%;}
+#add-type, #edit-type {	width: 20%;}
+#add-size, #edit-size {	width: 20%;}
+#add-cas, #edit-cas {	width: 20%;}
 #add-chemical-submit, #edit-chemical-submit {
 	width: 100%;
 	margin-top: 20px;
@@ -165,6 +165,11 @@ select:focus {
 #delete-chemical-submit {
 	width: 100%;
 	margin-top: 10px;
+}
+.add-chemical #error, .edit-chemical #error {
+	font-size: 12px;
+	color: rgba(209,25,25,0.8);
+	display: none;
 }
 
 /* HEADER CSS */
