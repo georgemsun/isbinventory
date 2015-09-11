@@ -14,7 +14,7 @@ body {
 	z-index: -1;
 }
 .container {
-	padding: 30px;
+	padding: 50;
 	padding-top: 15px;
 }
 
@@ -34,7 +34,7 @@ input, button, select {
 input {
 	cursor: text;
 }
-button, select {
+button, select, input[type=button] {
 	cursor: pointer; cursor: hand;
 }
 input[type=text]:focus {
@@ -108,46 +108,46 @@ select:focus {
 .add-chemical-container h3:hover {
 	cursor: pointer; cursor: hand;
 }
-.add-chemical button[type=button] {
+.add-chemical input[type=button] {
 	outline: none;
 	padding: 0px;
 	background-color: rgba(101,195,209,0.5);
 	color: white;
 }
-.add-chemical button[type=button]:hover {
+.add-chemical input[type=button]:hover {
 	background-color: rgba(101,195,209,0.8);
 	color: white;
 }
-.add-chemical button[type=button]:active {
+.add-chemical input[type=button]:active {
 	background-color: rgba(101,195,209,0.5);
 	color: white;
 }
-.edit-chemical button[type=button] {
+.edit-chemical input[type=button] {
 	outline: none;
 	padding: 0px;
 	background-color: rgba(101,195,209,0.5);
 	color: white;
 }
-.edit-chemical button[type=button]:hover {
+.edit-chemical input[type=button]:hover {
 	background-color: rgba(101,195,209,0.8);
 	color: white;
 }
-.edit-chemical button[type=button]:active {
+.edit-chemical input[type=button]:active {
 	background-color: rgba(101,195,209,0.5);
 	color: white;
 }
-.delete-chemical-submit button[type=button] {
+.delete-chemical-submit input[type=button] {
 	outline: none;
 	padding: 0px;
 	background-color: rgba(178,178,178,0.5);
 	color: white;
 	border: 1px solid rgba(178,178,178,0.5);
 }
-.delete-chemical-submit button[type=button]:hover {
+.delete-chemical-submit input[type=button]:hover {
 	background-color: rgba(209,25,25,0.8);
 	color: white;
 }
-.delete-chemical-submit button[type=button]:active {
+.delete-chemical-submit input[type=button]:active {
 	background-color: rgba(209,25,25,0.5);
 	color: white;
 }
