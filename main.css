@@ -104,6 +104,7 @@ select:focus {
     margin-left: auto;
 	top: 50%;
 	margin-top: -175px;
+	display: none;
 }
 .add-chemical-container h3:hover {
 	cursor: pointer; cursor: hand;
@@ -151,6 +152,7 @@ select:focus {
 	background-color: rgba(209,25,25,0.5);
 	color: white;
 }
+#select-name { width: 100% }
 #add-name, #edit-name {	width: 100%;}
 #add-location, #edit-location {	width: 100%;}
 #add-notes, #edit-notes {	width: 100%;}
@@ -166,7 +168,7 @@ select:focus {
 	width: 100%;
 	margin-top: 10px;
 }
-.add-chemical #error, .edit-chemical #error {
+.add-chemical #error, .edit-chemical #error, .edit-chemical #error-add {
 	font-size: 12px;
 	color: rgba(209,25,25,0.8);
 	display: none;
