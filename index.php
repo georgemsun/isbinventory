@@ -8,7 +8,7 @@
 			
 		<?php
 			$tab = "	";
-			$filename = "play.txt";
+			$filename = "tsv.txt";
 			$file = fopen($filename, 'r') or die("Unable to open inventory file. If this message appears after reloading, try locating '" . $filename . "'");
 			
 			if($_GET["add-name"] != "") {
@@ -20,14 +20,15 @@
 				file_put_contents($filename, $_GET["add-notes"] . $tab, FILE_APPEND);
 				file_put_contents($filename, $_GET["add-phy"] . $tab, FILE_APPEND);
 				file_put_contents($filename, $_GET["add-type"] . $tab, FILE_APPEND);
-				file_put_contents($filename, $_GET["add-cas"] . $tab, FILE_APPEND);
+				file_put_contents($filename, $_GET["add-cas"], FILE_APPEND);
 			}
 			
-			if($_GET["edit-name"] != "") {
+			$select_name_tab = "———";
+			if($_GET["select-name"] != "") {
 				// read into array
 				$arr = file($filename);
-				// remove second line
-				$search = $_GET["edit-name"];
+				// remove line containing matching text
+				$search = str_replace($select_name_tab, $tab, $_GET["select-name"]);
 				$line_number = false;
 				while(list($key, $line) = each($arr) and !$line_number) {
 				   $line_number = (strpos($line, $search) !== FALSE) ? $key + 1 : $line_number;
@@ -45,7 +46,7 @@
 				if(window.location.href.toLowerCase().indexOf("add-name") > -1) {
 					window.location.href = "http://db.systemsbiology.net/MoritzInventory/";
 				}
-				if(window.location.href.toLowerCase().indexOf("edit-name") > -1) {
+				if(window.location.href.toLowerCase().indexOf("select-name") > -1) {
 					window.location.href = "http://db.systemsbiology.net/MoritzInventory/";
 				}
 				<!--row-selected-->
@@ -82,7 +83,7 @@
 					$('#add-name, #add-location, #add-notes, #add-phy, #add-type, #add-size, #add-cas').val('');
 					$('.edit-chemical').fadeOut('fast');
 					$('.edit-chemical #error').css("display", "none");
-					$('#edit-name, #edit-location, #edit-notes, #edit-phy, #edit-type, #edit-size, #edit-cas').val('');
+					$('#select-name, #edit-name, #edit-location, #edit-notes, #edit-phy, #edit-type, #edit-size, #edit-cas').val('');
 				};
 				$('.fade').click(function() {
 					closeWindow();
@@ -121,8 +122,6 @@
 					else {
 						window.location.href = "http://db.systemsbiology.net/MoritzInventory/?add-name=" + $('#add-name').val() + "&add-location=" + $('#add-location').val() + "&add-notes=" + $('#add-notes').val() + "&add-phy=" + $('#add-phy').val() + "&add-type=" + $('#add-type').val() + "&add-size=" + $('#add-size').val() + "&add-cas=" + $('#add-cas').val();
 						
-						$('.troubleshooting').html("<strong>ADDED THE FOLLOWING: </strong>" + add_string);
-						
 						$('.fade').fadeOut('fast');
 						$('.add-chemical').fadeOut('fast');
 						$('.add-chemical #error').css("display", "none");
@@ -130,45 +129,55 @@
 					}
 				});
 				$('#edit-chemical-submit').click(function() {
-					if($('#edit-name').val() == "") {
+					if($('#select-name').val() == "") {
 						$('.edit-chemical #error').css("display", "block");
 					}
+					else if($('#edit-name').val() == "" || $('#edit-location').val() == "") {
+						$('.edit-chemical #error-add').css("display", "block");
+					}
 					else {
-						var edit_string = $('#edit-name').val() + tab + $('#edit-location').val() + tab + $('#edit-size').val() + tab + $('#edit-notes').val() + tab + $('#edit-phy').val() + tab + $('#edit-type').val()+ tab + $('#edit-cas').val() + tab;
-						
-						$('.troubleshooting').html("<strong>EDITED THE FOLLOWING: </strong>" + edit_string);
+						window.location.href = "http://db.systemsbiology.net/MoritzInventory/?add-name=" + $('#edit-name').val() + "&add-location=" + $('#edit-location').val() + "&add-notes=" + $('#edit-notes').val() + "&add-phy=" + $('#edit-phy').val() + "&add-type=" + $('#edit-type').val() + "&add-size=" + $('#edit-size').val() + "&add-cas=" + $('#edit-cas').val() + "&select-name=" + $('#select-name').val();
 						
 						$('.fade').fadeOut('fast');
 						$('.edit-chemical').fadeOut('fast');
 						$('.edit-chemical #error').css("display", "none");
-						$('#edit-name, #edit-location, #edit-notes, #edit-phy, #edit-type, #edit-size, #edit-cas').val('');
+						$('#select-name, #edit-name, #edit-location, #edit-notes, #edit-phy, #edit-type, #edit-size, #edit-cas').val('');
 					}
 				});
 				$('#delete-chemical-submit').click(function() {
-					//Code
-					if($('#edit-name').val() == "") {
+					if($('#select-name').val() == "") {
 						$('.edit-chemical #error').css("display", "block");
 					}
 					else {
-						window.location.href = "http://db.systemsbiology.net/MoritzInventory/?edit-name=" + $('#edit-name').val() + "&edit-location=" + $('#add-location').val() + "&add-notes=" + $('#add-notes').val() + "&add-phy=" + $('#add-phy').val() + "&add-type=" + $('#add-type').val() + "&add-size=" + $('#add-size').val() + "&add-cas=" + $('#add-cas').val();
-						
-						$('.troubleshooting').html("<strong>DELETED THE FOLLOWING: </strong>" + edit_string);
+						window.location.href = "http://db.systemsbiology.net/MoritzInventory/?select-name=" + $('#select-name').val();
 						
 						$('.fade').fadeOut('fast');
 						$('.edit-chemical').fadeOut('fast');
 						$('.edit-chemical #error').css("display", "none");
-						$('#edit-name, #edit-location, #edit-notes, #edit-phy, #edit-type, #edit-size, #edit-cas').val('');
+						$('#select-name, #edit-name, #edit-location, #edit-notes, #edit-phy, #edit-type, #edit-size, #edit-cas').val('');
 					}
 				});
-				$('#edit-name').change(function () {
-					$('.troubleshooting').html("<strong>SELECTED THE FOLLOWING: </strong>" + $('#edit-name').val());
-					$('#edit-location').val('');
-					$('#edit-notes').val('');
-					$('#edit-phy').val('');
-					$('#edit-type').val('');
-					$('#edit-size').val('');
-					$('#edit-cas').val('');
-					//add code that fills in new values
+				$('#select-name').change(function () {
+					var select_name = $('#select-name').val();
+					var select_name_tab = "———";
+					$('#edit-name').val(select_name.substring(0, select_name.indexOf(select_name_tab)));
+					select_name = select_name.substring(select_name.indexOf(select_name_tab) + select_name_tab.length, select_name.length);
+					$('#edit-location').val(select_name.substring(0, select_name.indexOf(select_name_tab)));
+					select_name = select_name.substring(select_name.indexOf(select_name_tab) + select_name_tab.length, select_name.length);
+					$('#edit-size').val(select_name.substring(0, select_name.indexOf(select_name_tab)));
+					select_name = select_name.substring(select_name.indexOf(select_name_tab) + select_name_tab.length, select_name.length);
+					$('#edit-notes').val(select_name.substring(0, select_name.indexOf(select_name_tab)));
+					select_name = select_name.substring(select_name.indexOf(select_name_tab) + select_name_tab.length, select_name.length);
+					$('#edit-phy').val(select_name.substring(0, select_name.indexOf(select_name_tab)));
+					select_name = select_name.substring(select_name.indexOf(select_name_tab) + select_name_tab.length, select_name.length);
+					$('#edit-type').val(select_name.substring(0, select_name.indexOf(select_name_tab)));
+					select_name = select_name.substring(select_name.indexOf(select_name_tab) + select_name_tab.length, select_name.length);
+					if(select_name.indexOf(select_name_tab) < 0) { //because some entries have tab at the end
+						$('#edit-cas').val(select_name.substring(0, select_name.length));
+					}
+					else {
+						$('#edit-cas').val(select_name.indexOf(select_name_tab));
+					}
 				});
 			});
 		</script>
@@ -193,8 +202,6 @@
 		<meta name="theme-color" content="#ffffff">
 	</head>
 	<body>
-		<span class="troubleshooting" style="font-size: 20px"></span>
-		
 		<div class="tagline"></div>
 		
 		<div class="fade"></div>
@@ -227,30 +234,36 @@
 			<div class="edit-chemical">
 				<form>
 					<h3>Edit Chemical<span style="color: #CCCCCC"> / Add Chemical</span></h3>
-					<select id= "edit-name"  name="edit-name">
-						<option value="" disabled selected>Name</option>
+					<select id="select-name"  name="select-name">
+						<option value="" disabled selected>Select</option>
 						<?php
 							$file = fopen($filename, 'r') or die("Unable to open inventory file! If this message appears after reloading, try locating '" . $filename . "'");
 							while (($line = fgets($file)) !== false) {
-								$name = substr($line, 0, strpos($line, $tab));
-								echo "<option value=\"" . $name . "\">" . $name . "</option>";
+								if($line != "\n") {
+									$line = str_replace($tab, $select_name_tab, $line);
+									$name = substr($line, 0, strlen($line)); /* strpos($line, $tab) strlen($line) */
+									echo "<option value=\"" . $name . "\">" . $name . "</option>";
+								}
 							}
 						?>
 					</select>
-					<input type="text" id= "edit-location" name="edit-location" placeholder="Location">
-					<input type="text" id= "edit-notes" name="edit-notes" placeholder="Notes">
-					<select id="edit-phy" name="edit-phy">
+					<input type="text" id= "edit-name" name="edit-name" placeholder="Name" value="<?php echo $select_name; ?>">
+					<input type="text" id= "edit-location" name="edit-location" placeholder="Location" value="<?php echo $edit_location; ?>">
+					<input type="text" id= "edit-notes" name="edit-notes" placeholder="Notes" value="<?php echo $edit_notes; ?>">
+					<select id="edit-phy" name="edit-phy" value="<?php echo $edit_phy; ?>">
 						<option value="" disabled selected>Physical State</option>
-						<option value="S">Solid</option>
-						<option value="L">Liquid</option>
+						<option value="" <?=$edit_phy == "" ? ' selected="selected"' : '';?>></option>
+						<option value="S" <?=$edit_phy == "S" ? ' selected="selected"' : '';?>>Solid</option>
+						<option value="L" <?=$edit_phy == "L" ? ' selected="selected"' : '';?>>Liquid</option>
 					</select>
-					<select id="edit-type" name="edit-type">
+					<select id="edit-type" name="edit-type"  value="<?php echo $edit_type; ?>">
 						<option value="" disabled selected>Bottle Type</option>
-						<option value="P">Plastic</option>
-						<option value="G">Glass</option>
+						<option value="" <?=$edit_type == "" ? ' selected="selected"' : '';?>></option>
+						<option value="P" <?=$edit_type == "P" ? ' selected="selected"' : '';?>>Plastic</option>
+						<option value="G" <?=$edit_type == "G" ? ' selected="selected"' : '';?>>Glass</option>
 					</select>
-					<input type="text" id= "edit-size" name="edit-size" placeholder="Size">
-					<input type="text" id= "edit-cas" name="edit-cas" placeholder="CAS">
+					<input type="text" id= "edit-size" name="edit-size" placeholder="Size"  value="<?php echo $edit_size; ?>">
+					<input type="text" id= "edit-cas" name="edit-cas" placeholder="CAS"  value="<?php echo $edit_cas; ?>">
 					</br>
 					
 					<input type="button" id="edit-chemical-submit" value="Edit Chemical"></input>
@@ -258,6 +271,7 @@
 						<input type="button" id="delete-chemical-submit" value="Delete Chemical"></input>
 					</div>
 					<p id="error">Please select a chemical to edit or delete.</p>
+					<p id="error-add">Please include at least a name and a location.</p>
 				</form>
 			</div>
 		</div>
@@ -266,8 +280,6 @@
 			<div class="header">
 				<h1>Moritz Lab &ndash; Chemical Inventory</h1>
 				<input type="text" data-table="order-table" id="search-name" placeholder="Type here to search">
-				<!--<input type="text" data-table="order-table" id="search-cas" placeholder="CAS">
-				<input type="text" data-table="order-table" id="search-location" placeholder="Location">-->
 				<button type="button" id="search-add-edit">Add/Edit Chemical</button>
 			</div>
 			
