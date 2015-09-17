@@ -1,4 +1,4 @@
- -Ade/-His/-Leu/-Trp DO supplement	cabinet by glassware	10g		S	P	
+-Ade/-His/-Leu/-Trp DO supplement	cabinet by glassware	10g		S	P	
 1-(3-Dimethylaminopropyl)-3-ethylcarbodiimide hydrochloride	cabinet by glassware	10g		S	G	
 1-(tert-Butoxycarbonyl)-imidazole	cabinet by glassware	10g	two of these	S	G	49761-82-2
 1-Ethyl-3-(3-dimethylaminopropyl) carbodiimide HCl	cabinet by glassware	5g	in package	S	G	25952-53-8
@@ -118,21 +118,21 @@ Cyclohexyl-N'.... FLUKA: 29469	cabinet by glassware	5g		S	G	2491-17-0
 Cystamine SIGMA C8707	cabinet by glassware	100g		S	G	56-17-7
 Cystein HCl Monohydrate	cabinet by glassware	5g		S	G	52-89-1
 D-(-)-salicin	cabinet by glassware	5g		S	P	138-52-3
-D-(+)-Biotin	cabinet by glassware	1g		S	G	58-85-5
-D-(+)-Galactose	cabinet by glassware	500g		S	P	59-23-4
-D-(+)-Galactose	cabinet by glassware	100g		S	G	59-23-4
+D-(plus)-Biotin	cabinet by glassware	1g		S	G	58-85-5
+D-(plus)-Galactose	cabinet by glassware	500g		S	P	59-23-4
+D-(plus)-Galactose	cabinet by glassware	100g		S	G	59-23-4
 DEAE-650S	cabinet by glassware	250ml		L	P	
 Detergent Reagent	cabinet by glassware	250ml	three of these	L	P	4890-25-02
 Dextrose	cabinet by glassware	1kg		S	G	
 Dextrose, Anhydrous	cabinet end of bay 3	500g		S	P	50-99-7
 Dextrose, Anhydrous FISHER	cabinet end of bay 3	500g		S	G	50-99-7
-D-(+)-Glucose	cabinet end of bay 3	500g		S	P	50-99-7
+D-(plus)-Glucose	cabinet end of bay 3	500g		S	P	50-99-7
 Dichloromaleic anydride ALDRICH: D6500-3	cabinet by glassware	5g		S	G	1122-17-4
 Diethyl malonimidate	cabinet by glassware	5g		S	G	10344-69-1
 Diethylene triamine penta acetic acid	cabinet by glassware	5g	In a tin plate	S	G	67-43-6
 Digitonin	cabinet by glassware	5g		S	G	11024-24-1
 Dimethyl decylphosphine Oxide	cabinet by glassware	1g		S	G	
-D-Lactose-1-(C-13) – H2O	cabinet by glassware	100mg		S	G	605328
+D-Lactose-1-(C-13) H2O	cabinet by glassware	100mg		S	G	605328
 DL-Serine	cabinet by glassware	100g		S	P	302-84-1
 D-Mannitol, SigmaUltra	cabinet by glassware	1kg		S	P	69-65-8
 D-Panose	cabinet by glassware	50mg		S	G	33401-87-5
@@ -245,7 +245,7 @@ Methyl Sulfoxide	cabinet by glassware	250mL		L	G	67-68-5
 Methylcellulose Lab Grade	cabinet by glassware	100g		S	P	9004-67-5
 Methylene Blue	cabinet by glassware	2.5 g		S	G	61-73-4
 Methyliminodiacetic Acid	cabinet by glassware	25g		S	P	4408-64-4
-Methyl-ß-cyclodextrin	cabinet by glassware	5g		S	G	128446-36-6
+Methyl-beta-cyclodextrin	cabinet by glassware	5g		S	G	128446-36-6
 Milk - instant nonfat dry CARNATION	cabinet by glassware	725g	in a box	S	P	
 Milk - national nonfat dry SAFEWAY	cabinet by glassware	272g	in a box	S	P	
 MgCl  FISHER	cabinet end of bay 3	500g		S	P	7791-18-6
@@ -330,7 +330,7 @@ Silica Gel	cabinet by glassware	1kg		S	P	112926-00-8
 skim milk powder	cabinet by glassware	500g		S	P	
 Sodium Acetate, anhydrous  JT BAKER	cabinet end of bay 3	500g		S	P	127-09-3
 Sodium Acetate, anhydrous SIGMA	cabinet end of bay 3	1kg		S	P	127-09-3
-Sodium Acetate 99+% A.C.S. reagent	cabinet end of bay 3	5g		S	G	127-09-3
+Sodium Acetate 99plus% A.C.S. reagent	cabinet end of bay 3	5g		S	G	127-09-3
 Sodium Acetate	cabinet by glassware	5g		S	G	127-09-3
 Sodium bicarbonate	cabinet by glassware	500g		S	P	144-55-8
 Sodium bicarbonate 	cabinet by glassware	500g		S	P	144-55-8
@@ -414,7 +414,7 @@ Zinc	cabinet by glassware	10g		S	G
 Zinc sulfate	cabinet by glassware	100g		S	P	7446-20-0
 Zinc sulfate heptahydrate	cabinet by glassware	125g		S	P	
 Zwitterion detergent	cabinet by glassware	5g		S	G	
-ß-Lactose Sigma: L3750	cabinet by glassware	100g		S	P	5965-66-2
+beta-Lactose Sigma: L3750	cabinet by glassware	100g		S	P	5965-66-2
 Bovine Serum Albumin (Fract V)	left fridge of bay 1	100g		S	G	9048-46-8
 Hydrogen Peroxide	left fridge of bay 1	100ml	two of these	L	P	7722-84-1
 Dithiothreitol	left fridge of bay 1	5g		S	G	3483-12-3
@@ -481,129 +481,116 @@ Acetic anhydride	yellow cabinet in mass spec room	250ml		L	G	108-24-7
 Acetyl chloride	yellow cabinet in mass spec room	100ml		L	G	75-36-5
 Formamide	yellow cabinet in mass spec room	250ml		L	G	75-12-7
 KASIL 1 Potassium Silicate	yellow cabinet in mass spec room	about 1L		L	P	1312-76-1
-Ammonium hydroxide solution, ACS REAGENT	+4.45 fridge	500ml		L	G	1336-21-6
-Albumin from bovine serum	+4.45 fridge	50g		S	P	9048-46-8
-Bio-Rad Protein Assay Dye Reagent Concentrate	+4.45 fridge	450ml		L	P	7664-38-2
-Ammonium hydroxide solution, ACS REAGENT	+4.45 fridge	500ml		L	P	1336-21-6
-Aniline, 99.5+%, A.C.S. reagent	+4.45 fridge	100g		L	G	62-53-3
-Bathophenanthroline, Sulfonated, Sodium salt, reagent	+4.45 fridge	1g		S	G	53744-42-6
-AN UNLABELED BOTTLE	+4.45 fridge			S	G	
-Ellman's Reagent	+4.45 fridge	5g		S	G	69-78-3
-Diethyl Pyrocarbonate	+4.45 fridge	25ml		L	G	1609-47-8
-Catalase	+4.45 fridge			L	G	
-Bovine Serum Albumin (Fract V) (Heat Shock Treated)	+4.45 fridge	100g		S	G	9048-46-8
-Bio-Rad Protein Assay Dye Reagent Concentrate	+4.45 fridge	450ml		L	P	7664-38-2
-CNBr	+4.45 fridge				G	
-Ammonium Hydroxide, 28-30% (ACS)	+4.45 fridge	500ml		L	P	1336-21-6
-SuperBlock Blocking Buffer in PBS	+4.45 fridge	1L		L	P	
-Ammonium hydroxide solution	+4.45 fridge	100ml		L	G	1336-21-6
-Bovine Serum Albumin (Fract V) (Heat Shock Treated)	+4.45 fridge	100g		S	G	9048-46-8
-Albumin, bovine serum, Fraction V	+4.45 fridge	10g		S	P	9048-46-8
-Boc-D-Tyr-OMe, Boc-D-tyrosine methyl ester, 99% (HPLC)	+4.45 fridge	25g		S	P	76757-90-9
-Albumin, from bovine serum	+4.45 fridge	10g		S	P	9048-46-8
-EAH Sepharose 4B	+4.45 fridge	50ml		L	P	17-0569-01
-Boc-Lys-OH	+4.45 fridge	25g		S	P	13734-28-6
-DL-1,4-Dithiothreitol 99%	+4.45 fridge	5g		S	G	3483-12-3
-Boc-Lys-OMe AcOH, Boc-L-lysine methyl ester acetate salt, >99% (TLC)	+4.45 fridge	5g		L	G	
-1,4-Diazabicyclo[2.2.2]octane	+4.45 fridge	25g		S	G	280-57-9
-Collagenase Type I	+4.45 fridge	1g		S	G	9001-12-1
-Copper(II) sulfate pentahydrate	+4.45 fridge	10g		S	P	7758-99-8
-Cycloheximide	+4.45 fridge	5g		S	G	
-Anglotensin I human acetate hydrate	+4.45 fridge	1mg			G	70937-97-2
-Dabsyl chloride	+4.45 fridge	500mg	in a bag		G	
-Cellection Biotin Binder kit	+4.45 fridge		two of these, in a box			
-Blue Dexitran 2000	+4.45 fridge	500mg		L	P	
-Myo	+4.45 fridge	10mg		L	P	
-IAA	+4.45 fridge	500mM		L	P	
-Phenyl Sepharose	+4.45 fridge	200MG		L	P	
-D-(-)-Ribose, minimum 99%	+4.45 fridge	25g		S	P	50-69-1
-Albumin, Bovine (BSA)	+4.45 fridge			S	P	9048-46-8
-Albumin, Human Serum, Fraction V	+4.45 fridge	10g		S	P	70024-90-7
-NHS-activated Sepharose 4 Fast Flow	+4.45 fridge	25ml		L	P	17-0906-01
-Staphylococcus aureus V-8 Protease	+4.45 fridge			S	G	66676-43-5
-Pierce CDI-Agarose	+4.45 fridge	10ml		L	G	67-64-1
-D-Glucose- 13C6, 99 atom % 13C	+4.45 fridge	3g	two of these	S	G	110187-42-3
-Histone from calf thymus, Type II-A	+4.45 fridge	100mg		S	P	9014-81-7
-Fetuin, From Fetal Calf Serum	+4.45 fridge	100mg		S	P	70024-90-7
-Albumin from human serum, 96-99%	+4.45 fridge	500mg		S	P	
-Hydrazide-Modified Magnetic Beads	+4.45 fridge	1ml	two of these	S	P	
-Nitrotetrazolin Blue chloride	+4.45 fridge	100mg	two of these	S	P	298-83-9
-8M Guanidine Hydrochloride	+4.45 fridge	200ml		L	G	50-01-1
-2-Mercaptoethanol	+4.45 fridge	100g		L	G	60-24-2
-Triethylammonium bicarbonate buffer	+4.45 fridge	100ml		L	G	15715-58-9
-Methyl 4-chlorobutyrate, 98+%	+4.45 fridge	100g		L	G	3153-37-5
-Ni-NTA Agarose	+4.45 fridge	25ml	two of these	L	P	
-MTT Reagent	+4.45 fridge	25ml		L	P	
-Beta-Mercaptoethanol	+4.45 fridge	2ml			P	60-24-2
-(3-Mercaptopropyl)trimethoxysilane	+4.45 fridge	25g		L	G	4420-74-0
-Myoglobin	+4.45 fridge	1g		S	G	100684-32-0
-3-Maleimidopropionic acid, 97%	+4.45 fridge	250mg		S	G	7423-55-4
-Methyl sulfide, 99+%	+4.45 fridge	25ml		L	G	74-18-3
-Total Protein Kit, Micro Pyrogallol Red Method	+4.45 fridge		in a box			
-Pierce ECL Western Blotting Substrate	+4.45 fridge		in a box			
-Ni-NTA Magnetic Agarose Beads	+4.45 fridge		in a box			
-Alpha-Cyano-4-Hydroxycinnamic Acid	+4.45 fridge		in a box			
-Formic Acid	+4.45 fridge	1L		L	P	64-18-6
-Affi-Prep Hz Hydrazide Support	+4.45 fridge	500ml		L	P	67-63-0
-Fluoraldehyde o-Phthalaldehyde	+4.45 fridge	945ml		L	P	643-79-8
-Total Protein Reagent, Micro Pyrogallol Red Method	+4.45 fridge	120ml		L	P	
-Mydrogen Peroxide	+4.45 fridge	100ml		L	P	7722-84-1
-DL-Glyceraldehyde	+4.45 fridge	5g		S	G	56-82-6
-HOBt	+4.45 fridge	25g		S	P	01-62-0008
-HisPur Cobalt Resin	+4.45 fridge	10ml		L	P	
-His-Select Cobalt Affinity Gel	+4.45 fridge	5ml		L	P	
-Hydroxylamine	+4.45 fridge	50ml		L	P	7803-49-8
-L-Glutamic acid S-methyl ester, 99%	+4.45 fridge	5g		S	G	1499-55-4
-Iodoacetamide	+4.45 fridge	10g		S	G	144-48-9
-Iodoacetamide	+4.45 fridge	10g		S	G	144-48-9
-Hydroxyurea	+4.45 fridge	5g		S	P	127-07-1
-Lysozyme	+4.45 fridge	1g			P	12650-88-3
-HIS-Select Nickel Magnetic Agarose Beads	+4.45 fridge	5mg		L	G	
-Hydrazide Resin w/IPA	+4.45 fridge			L	P	
-Silver 6 Nitrate	+4.45 fridge			L	P	
-Endoproteinase Lys-C Sequencing Grade	+4.45 fridge		two of these, in a box			
-Pierce Detergent Removal Spin Columns	+4.45 fridge		in a box			
-Waters MS Leucine Enkephalin Kit	+4.45 fridge		in a box			
-Glycoprotein Binding buffer SB 30 mL	+4.45 fridge		in a box	L	P	
-Phenol:ChCl3:IAA	+4.45 fridge	100ml		L	G	
-Phos-tag Agarose	+4.45 fridge	3ml	in a box			
-Propargyl bromide, 80 wt. % solution in toluene	+4.45 fridge	50g		L	G	
-Polyethylene glycol	+4.45 fridge	500g		L	G	25322-68-3
-Pierce Detergent Removal Spin Columns, 2mL	+4.45 fridge		in a box			
-Phenylmethanesulfonyl fluoride Solution	+4.45 fridge	50ml		L	G	329-98-6
-Paraformaldehyde	+4.45 fridge	500g		S	P	30525-89-4
-Reserpine 6.167 pmole/uL	+4.45 fridge			L	P	
-L-Tyrosine	+4.45 fridge	50g		S	P	60-18-4
-TRIzol Reagent	+4.45 fridge	200ml		L	G	
-Tris-Acetate SDS Running Buffer	+4.45 fridge	500ml		L	P	
-Sigmacote	+4.45 fridge	100ml		L	G	
-TRIzol LS Reagent	+4.45 fridge	100ml		L	G	
-HPLC Grade 2M Triethylamine Acetate	+4.45 fridge	200ml	two of these	L	G	
-Trichloroacetic acid	+4.45 fridge	100g		L	G	76-03-9
-Tetramethylammonium triacetoxyborohydride	+4.45 fridge	10g		S	G	109704-53-2
-(+)-Sodium L-ascorbate	+4.45 fridge	25g		S	P	134-03-2
-Z-Lys-OMe HCl	+4.45 fridge	5g		S	P	
-NHS-activated Sepharose 4 Fast Flow	+4.45 fridge	25ml	in a box	L	P	17-0906-01
-SYBR Safe DNA gel stain	+4.45 fridge	400ul				
-Activated Thiol Sepharose 4B	+4.45 fridge	15g		S	P	17-0640-01
-SIGMAFAST Protease Inhibitor Cocktail Tablets, EDTA-free	+4.45 fridge	20 tablets		S	P	
-Thermolysin	+4.45 fridge	250mg		S	G	
-Squalene	+4.45 fridge	10ml		L	G	111-02-4
-Subtilisin	+4.45 fridge	250mg		S	G	
-SILAC Amino Acids	+4.45 fridge	bag of 5				
-Isopropyl beta-D-1-thiogalactopyranoside	+4.45 fridge	1g	three of these	S	G	367-93-1
-TSKgel Column Boronate-5PW	+4.45 fridge		in a box			
-
-Dyrabeads M-270 Streptavidin	 4.45 fridge		in a box				
-
-
-
-
-
-
-
-
-
-
-
-
+Ammonium hydroxide solution, ACS REAGENT	4.45 fridge	500ml		L	G	1336-21-6
+Albumin from bovine serum	4.45 fridge	50g		S	P	9048-46-8
+Bio-Rad Protein Assay Dye Reagent Concentrate	4.45 fridge	450ml		L	P	7664-38-2
+Ammonium hydroxide solution, ACS REAGENT	4.45 fridge	500ml		L	P	1336-21-6
+Aniline, 99.5plus%, A.C.S. reagent	4.45 fridge	100g		L	G	62-53-3
+Bathophenanthroline, Sulfonated, Sodium salt, reagent	4.45 fridge	1g		S	G	53744-42-6
+AN UNLABELED BOTTLE	4.45 fridge			S	G	
+Ellman's Reagent	4.45 fridge	5g		S	G	69-78-3
+Diethyl Pyrocarbonate	4.45 fridge	25ml		L	G	1609-47-8
+Catalase	4.45 fridge			L	G	
+Bovine Serum Albumin (Fract V) (Heat Shock Treated)	4.45 fridge	100g		S	G	9048-46-8
+Bio-Rad Protein Assay Dye Reagent Concentrate	4.45 fridge	450ml		L	P	7664-38-2
+CNBr	4.45 fridge				G	
+Ammonium Hydroxide, 28-30% (ACS)	4.45 fridge	500ml		L	P	1336-21-6
+SuperBlock Blocking Buffer in PBS	4.45 fridge	1L		L	P	
+Ammonium hydroxide solution	4.45 fridge	100ml		L	G	1336-21-6
+Bovine Serum Albumin (Fract V) (Heat Shock Treated)	4.45 fridge	100g		S	G	9048-46-8
+Albumin, bovine serum, Fraction V	4.45 fridge	10g		S	P	9048-46-8
+Boc-D-Tyr-OMe, Boc-D-tyrosine methyl ester, 99% (HPLC)	4.45 fridge	25g		S	P	76757-90-9
+Albumin, from bovine serum	4.45 fridge	10g		S	P	9048-46-8
+EAH Sepharose 4B	4.45 fridge	50ml		L	P	17-0569-01
+Boc-Lys-OH	4.45 fridge	25g		S	P	13734-28-6
+DL-1,4-Dithiothreitol 99%	4.45 fridge	5g		S	G	3483-12-3
+Boc-Lys-OMe AcOH, Boc-L-lysine methyl ester acetate salt, >99% (TLC)	4.45 fridge	5g		L	G	
+1,4-Diazabicyclo[2.2.2]octane	4.45 fridge	25g		S	G	280-57-9
+Collagenase Type I	4.45 fridge	1g		S	G	9001-12-1
+Copper(II) sulfate pentahydrate	4.45 fridge	10g		S	P	7758-99-8
+Cycloheximide	4.45 fridge	5g		S	G	
+Anglotensin I human acetate hydrate	4.45 fridge	1mg			G	70937-97-2
+Dabsyl chloride	4.45 fridge	500mg	in a bag		G	
+Cellection Biotin Binder kit	4.45 fridge		two of these, in a box			
+Blue Dexitran 2000	4.45 fridge	500mg		L	P	
+Myo	4.45 fridge	10mg		L	P	
+IAA	4.45 fridge	500mM		L	P	
+Phenyl Sepharose	4.45 fridge	200MG		L	P	
+D-(-)-Ribose, minimum 99%	4.45 fridge	25g		S	P	50-69-1
+Albumin, Bovine (BSA)	4.45 fridge			S	P	9048-46-8
+Albumin, Human Serum, Fraction V	4.45 fridge	10g		S	P	70024-90-7
+NHS-activated Sepharose 4 Fast Flow	4.45 fridge	25ml		L	P	17-0906-01
+Staphylococcus aureus V-8 Protease	4.45 fridge			S	G	66676-43-5
+Pierce CDI-Agarose	4.45 fridge	10ml		L	G	67-64-1
+D-Glucose- 13C6, 99 atom % 13C	4.45 fridge	3g	two of these	S	G	110187-42-3
+Histone from calf thymus, Type II-A	4.45 fridge	100mg		S	P	9014-81-7
+Fetuin, From Fetal Calf Serum	4.45 fridge	100mg		S	P	70024-90-7
+Albumin from human serum, 96-99%	4.45 fridge	500mg		S	P	
+Hydrazide-Modified Magnetic Beads	4.45 fridge	1ml	two of these	S	P	
+Nitrotetrazolin Blue chloride	4.45 fridge	100mg	two of these	S	P	298-83-9
+8M Guanidine Hydrochloride	4.45 fridge	200ml		L	G	50-01-1
+2-Mercaptoethanol	4.45 fridge	100g		L	G	60-24-2
+Triethylammonium bicarbonate buffer	4.45 fridge	100ml		L	G	15715-58-9
+Methyl 4-chlorobutyrate, 98plus%	4.45 fridge	100g		L	G	3153-37-5
+Ni-NTA Agarose	4.45 fridge	25ml	two of these	L	P	
+MTT Reagent	4.45 fridge	25ml		L	P	
+Beta-Mercaptoethanol	4.45 fridge	2ml			P	60-24-2
+(3-Mercaptopropyl)trimethoxysilane	4.45 fridge	25g		L	G	4420-74-0
+Myoglobin	4.45 fridge	1g		S	G	100684-32-0
+3-Maleimidopropionic acid, 97%	4.45 fridge	250mg		S	G	7423-55-4
+Methyl sulfide, 99plus%	4.45 fridge	25ml		L	G	74-18-3
+Total Protein Kit, Micro Pyrogallol Red Method	4.45 fridge		in a box			
+Pierce ECL Western Blotting Substrate	4.45 fridge		in a box			
+Ni-NTA Magnetic Agarose Beads	4.45 fridge		in a box			
+Alpha-Cyano-4-Hydroxycinnamic Acid	4.45 fridge		in a box			
+Formic Acid	4.45 fridge	1L		L	P	64-18-6
+Affi-Prep Hz Hydrazide Support	4.45 fridge	500ml		L	P	67-63-0
+Fluoraldehyde o-Phthalaldehyde	4.45 fridge	945ml		L	P	643-79-8
+Total Protein Reagent, Micro Pyrogallol Red Method	4.45 fridge	120ml		L	P	
+Mydrogen Peroxide	4.45 fridge	100ml		L	P	7722-84-1
+DL-Glyceraldehyde	4.45 fridge	5g		S	G	56-82-6
+HOBt	4.45 fridge	25g		S	P	01-62-0008
+HisPur Cobalt Resin	4.45 fridge	10ml		L	P	
+His-Select Cobalt Affinity Gel	4.45 fridge	5ml		L	P	
+Hydroxylamine	4.45 fridge	50ml		L	P	7803-49-8
+L-Glutamic acid S-methyl ester, 99%	4.45 fridge	5g		S	G	1499-55-4
+Iodoacetamide	4.45 fridge	10g		S	G	144-48-9
+Iodoacetamide	4.45 fridge	10g		S	G	144-48-9
+Hydroxyurea	4.45 fridge	5g		S	P	127-07-1
+Lysozyme	4.45 fridge	1g			P	12650-88-3
+HIS-Select Nickel Magnetic Agarose Beads	4.45 fridge	5mg		L	G	
+Hydrazide Resin w/IPA	4.45 fridge			L	P	
+Silver 6 Nitrate	4.45 fridge			L	P	
+Endoproteinase Lys-C Sequencing Grade	4.45 fridge		two of these, in a box			
+Pierce Detergent Removal Spin Columns	4.45 fridge		in a box			
+Waters MS Leucine Enkephalin Kit	4.45 fridge		in a box			
+Glycoprotein Binding buffer SB 30 mL	4.45 fridge		in a box	L	P	
+Phenol:ChCl3:IAA	4.45 fridge	100ml		L	G	
+Phos-tag Agarose	4.45 fridge	3ml	in a box			
+Propargyl bromide, 80 wt. % solution in toluene	4.45 fridge	50g		L	G	
+Polyethylene glycol	4.45 fridge	500g		L	G	25322-68-3
+Pierce Detergent Removal Spin Columns, 2mL	4.45 fridge		in a box			
+Phenylmethanesulfonyl fluoride Solution	4.45 fridge	50ml		L	G	329-98-6
+Paraformaldehyde	4.45 fridge	500g		S	P	30525-89-4
+Reserpine 6.167 pmole/uL	4.45 fridge			L	P	
+L-Tyrosine	4.45 fridge	50g		S	P	60-18-4
+TRIzol Reagent	4.45 fridge	200ml		L	G	
+Tris-Acetate SDS Running Buffer	4.45 fridge	500ml		L	P	
+Sigmacote	4.45 fridge	100ml		L	G	
+TRIzol LS Reagent	4.45 fridge	100ml		L	G	
+HPLC Grade 2M Triethylamine Acetate	4.45 fridge	200ml	two of these	L	G	
+Trichloroacetic acid	4.45 fridge	100g		L	G	76-03-9
+Tetramethylammonium triacetoxyborohydride	4.45 fridge	10g		S	G	109704-53-2
+(plus)-Sodium L-ascorbate	4.45 fridge	25g		S	P	134-03-2
+Z-Lys-OMe HCl	4.45 fridge	5g		S	P	
+NHS-activated Sepharose 4 Fast Flow	4.45 fridge	25ml	in a box	L	P	17-0906-01
+SYBR Safe DNA gel stain	4.45 fridge	400ul				
+Activated Thiol Sepharose 4B	4.45 fridge	15g		S	P	17-0640-01
+SIGMAFAST Protease Inhibitor Cocktail Tablets, EDTA-free	4.45 fridge	20 tablets		S	P	
+Thermolysin	4.45 fridge	250mg		S	G	
+Squalene	4.45 fridge	10ml		L	G	111-02-4
+Subtilisin	4.45 fridge	250mg		S	G	
+SILAC Amino Acids	4.45 fridge	bag of 5				
+Isopropyl beta-D-1-thiogalactopyranoside	4.45 fridge	1g	three of these	S	G	367-93-1
+TSKgel Column Boronate-5PW	4.45 fridge		in a box			
+Dyrabeads M-270 Streptavidin	4.45 fridge		in a box	L	G	
