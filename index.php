@@ -2,8 +2,9 @@
 	<head>
 		<title>Chemical Inventory | Moritz Lab</title>
 		
-		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" type="text/css" href="main.css">
 		<script type="text/javascript" src="jquery.min.js"></script>
+		<script src="sorttable.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400' rel='stylesheet' type='text/css'>
 			
 		<?php
@@ -42,17 +43,33 @@
 		?>
 		<script type="text/javascript">
 			$(document).ready(function() {
-				<!--shitty solution-->
-				if(window.location.href.toLowerCase().indexOf("add-name") > -1) {
-					window.location.href = "http://db.systemsbiology.net/MoritzInventory/";
-				}
-				if(window.location.href.toLowerCase().indexOf("select-name") > -1) {
-					window.location.href = "http://db.systemsbiology.net/MoritzInventory/";
-				}
 				<!--row-selected-->
 				$('tr:not(.table-head)').click(function() {
-					$('tr').removeClass('row-selected');
-					$(this).addClass('row-selected');
+					if($(this).hasClass('row-selected')) {
+						$('tr').removeClass('row-selected');
+						//have you select chemical on edit
+					//	$('#select-name').show();
+					//	$('#select-name-different').hide();
+					//	$('#select-name').val('');
+					}
+					else {
+						$('tr').removeClass('row-selected');
+						$(this).addClass('row-selected');
+						//autofill chemical name on edit
+					//	$('#edit-name').val($(this).children("#name").html());
+					//	$('#edit-location').val($(this).children("#location").html());
+					//	$('#edit-size').val($(this).children("#size").html());
+					//	$('#edit-notes').val($(this).children("#notes").html());
+					//	$('#edit-phy').val($(this).children("#phy").html());
+					//	$('#edit-type').val($(this).children("#type").html());
+					//	$('#edit-cas').val($(this).children("#cas").html());
+					//	
+					//	var select_name_tab = "———";
+					//	var highlighted_name = $('#edit-name').val() + select_name_tab + $('#edit-location').val() + select_name_tab + $('#edit-size').val() + select_name_tab + $('#edit-notes').val() + select_name_tab + $('#edit-phy').val() + select_name_tab + $('#edit-type').val() + select_name_tab + $('#edit-cas').val();
+					//	$('#edit-name, #edit-location, #edit-size, #edit-notes, #edit-phy, #edit-type, #edit-cas').fadeIn('medium');
+					//	$('#select-name').hide();
+					//	$('#select-name-different').show();
+					}
 				});
 				<!--search-->
 				$('#search-name').keyup(function() {
@@ -84,6 +101,11 @@
 					$('.edit-chemical').fadeOut('fast');
 					$('.edit-chemical #error').css("display", "none");
 					$('#select-name, #edit-name, #edit-location, #edit-notes, #edit-phy, #edit-type, #edit-size, #edit-cas').val('');
+					//resets edit select
+					$('#edit-name, #edit-location, #edit-size, #edit-notes, #edit-phy, #edit-type, #edit-cas, #select-name-different').hide();
+					$('#select-name, #select-name-search').show();
+					$('#select-name-search').val('');
+					selected = 0;
 				};
 				$('.fade').click(function() {
 					closeWindow();
@@ -115,6 +137,8 @@
 					$('.add-chemical').fadeIn('fast');
 				});
 				<!--effects of clicking submit-->
+				$('.add-chemical #error-plus').css("display", "block");
+				$('.edit-chemical #error-plus').css("display", "block");
 				$('#add-chemical-submit').click(function() {
 					if($('#add-name').val() == "" || $('#add-location').val() == "") {
 						$('.add-chemical #error').css("display", "block");
@@ -157,7 +181,16 @@
 						$('#select-name, #edit-name, #edit-location, #edit-notes, #edit-phy, #edit-type, #edit-size, #edit-cas').val('');
 					}
 				});
+				
+				var selected = 0;
 				$('#select-name').change(function () {
+					if(selected == 0) {
+						selected = 1;
+						$('#edit-name, #edit-location, #edit-size, #edit-notes, #edit-phy, #edit-type, #edit-cas').fadeIn('medium');
+					}
+					$('#select-name, #select-name-search').hide();
+					$('#select-name-different').show();
+					
 					var select_name = $('#select-name').val();
 					var select_name_tab = "———";
 					$('#edit-name').val(select_name.substring(0, select_name.indexOf(select_name_tab)));
@@ -179,6 +212,32 @@
 						$('#edit-cas').val(select_name.indexOf(select_name_tab));
 					}
 				});
+				$('#select-name-different').click(function() {
+					selected = 0;
+					$('#edit-name, #edit-location, #edit-size, #edit-notes, #edit-phy, #edit-type, #edit-cas').fadeOut('medium');
+					$('#select-name, #select-name-search').show();
+					$('#select-name').val('');
+					$('#select-name-different').hide();
+				});
+				$('#select-name-search').keyup(function() {
+					_this = this;
+					$.each($('#select-name').find('option'), function() {
+						console.log($(this).text());
+						if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) == -1)
+							$(this).hide();
+						else {
+							$(this).show();
+						}
+					});
+				});	
+				<!--shitty solution-->
+				if(window.location.href.toLowerCase().indexOf("add-name") > -1) {
+					window.location.href = "http://db.systemsbiology.net/MoritzInventory/";
+				}
+				if(window.location.href.toLowerCase().indexOf("select-name") > -1) {
+					window.location.href = "http://db.systemsbiology.net/MoritzInventory/";
+				}
+				closeWindow();
 			});
 		</script>
 		
@@ -202,6 +261,7 @@
 		<meta name="theme-color" content="#ffffff">
 	</head>
 	<body>
+	
 		<div class="tagline"></div>
 		
 		<div class="fade"></div>
@@ -229,11 +289,14 @@
 					
 					<input type="button" id="add-chemical-submit" value="Add Chemical"></input>
 					<p id="error">Please include at least a name and a location.</p>
+					<p id="error-plus">The following characters may not process correctly: !, @, #, $, %, ^, &, *, +</p>
 				</form>
 			</div>
 			<div class="edit-chemical">
 				<form>
 					<h3>Edit Chemical<span style="color: #CCCCCC"> / Add Chemical</span></h3>
+					<button type="button" id="select-name-different" style="text-align: left; border: none; font-style: italic;">Click here to select a different chemical</button>
+					<input type="text" id="select-name-search" placeholder="Type here to filter menu below">
 					<select id="select-name"  name="select-name">
 						<option value="" disabled selected>Select</option>
 						<?php
@@ -272,6 +335,7 @@
 					</div>
 					<p id="error">Please select a chemical to edit or delete.</p>
 					<p id="error-add">Please include at least a name and a location.</p>
+					<p id="error-plus">The following characters may not process correctly: !, @, #, $, %, ^, &, *, +</p>
 				</form>
 			</div>
 		</div>
@@ -284,15 +348,15 @@
 			</div>
 			
 			<div class="table">
-				<table id="table">
+				<table id="table" class="sortable">
 					<thead>
 						<tr class="table-head">
-							<th>Name</th>
-							<th>Location</th>
-							<th>Size</th> 
-							<th>Notes</th>
-							<th>Physical</br>State</th>
-							<th>Bottle</br>Type</th>
+							<th><a href="#" bubbletooltip="Click to sort rows by Name">Name</a></th>
+							<th><a href="#" bubbletooltip="Click to sort rows by Location">Location</a></th>
+							<th><a href="#" bubbletooltip="Click to sort rows by Size">Size</a></th>
+							<th><a href="#" bubbletooltip="Click to sort rows by Notes">Notes</a></th>
+							<th><a href="#" bubbletooltip="Click to sort rows by Physical State">Physical</br>State</a></th>
+							<th><a href="#" bubbletooltip="Click to sort rows by Bottle Type">Bottle</br>Type</a></th>
 							<th>CAS</th>
 						</tr>
 					</thead>
