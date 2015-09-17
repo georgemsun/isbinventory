@@ -1,3 +1,32 @@
+body {
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+.tagline {
+	background: url('http://www.lancefarrow.ca/wp-content/uploads/2014/06/triangle-background-17.png');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: -1;
+}
+.container {
+	padding: 50;
+	padding-top: 15px;
+}
+.fade {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,0.3);
+	position: fixed;
+	z-index: 1;
+	display: none;
+}
+
+/* SCROLLBAR */
 ::-webkit-scrollbar {
     width: 7px;
 	height: 7px;
@@ -23,65 +52,17 @@
 	visibility: hidden;
 }
 
-body {
-	margin: 0;
+/* HEADER CSS */
+.header {
+	width: 100%;
+	padding-bottom: 20px;
+}
+h1 {
+	text-transform: uppercase;
 	font-family: 'Open Sans', sans-serif;
 }
-.tagline {
-	background: url('http://www.lancefarrow.ca/wp-content/uploads/2014/06/triangle-background-17.png');
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	height: 100%;
-	width: 100%;
-	position: fixed;
-	z-index: -1;
-}
-.container {
-	padding: 50;
-	padding-top: 15px;
-}
 
-a[bubbletooltip]:link, a[bubbletooltip]:visited {
-	text-decoration: none;
-	position: relative;
-	color: black;
-}
-a[bubbletooltip]:before {
-	content: "";
-	position: absolute;
-	border-bottom: 18px solid rgba(110,72,181,1);
-	border-left: 21px solid transparent;
-	border-right: 21px solid transparent;
-	visibility: hidden;
-	bottom: -20px;
-	left: -12px;
-}
-a[bubbletooltip]:after {
-	position: absolute;
-	content: attr(bubbletooltip);
-	color: #fffff;
-	font-weight:bold;
-	bottom: -35px;
-	left: -26px;
-	white-space: nowrap;
-	background: rgba(110,72,181,1);
-	padding: 5px 10px;
-	-moz-border-radius: 6px;
-	-webkit-border-radius:6px;
-	-khtml-border-radius:6px;
-	border-radius: 6px;
-	visibility: hidden;
-}
-a[bubbletooltip]:hover:before, a[bubbletooltip]:hover:after {
-	visibility: visible;
-	-moz-transition: visibility 0s linear .3s;
-	font-weight: normal;
-	color: white;
-}
-
-/* SEARCH CSS */
+/* INPUT CSS */
 input, button, select {
 	outline: none;
 	border: 1px solid rgba(101,195,209,0.5);
@@ -128,6 +109,8 @@ select:focus {
 	outline: none;
 	border: 1px solid rgba(101,195,209,1);
 }
+
+/* SEARCH CSS */
 .header button {
 	outline: none;
 padding: 0px;
@@ -152,13 +135,7 @@ padding: 0px;
 	width: 10px;
 }
 
-.fade {
-	width: 100%;
-	height: 100%;
-	background-color: rgba(255,255,255,0.3);
-	position: fixed;
-	z-index: 1;
-}
+/* POPUP CSS */
 .add-chemical, .edit-chemical {
 	padding: 40px 40px 50px 40px;
 	width: 1000px;
@@ -235,20 +212,10 @@ padding: 0px;
 	width: 100%;
 	margin-top: 10px;
 }
-.add-chemical #error, .add-chemical #error-plus, .edit-chemical #error, .edit-chemical #error-add, .edit-chemical #error-plus  {
+.add-chemical #error, .add-chemical #error-plus, .edit-chemical #error, .edit-chemical #error-add, .edit-chemical #error-plus {
 	font-size: 12px;
 	color: rgba(209,25,25,0.8);
 	display: none;
-}
-
-/* HEADER CSS */
-.header {
-	width: 100%;
-	padding-bottom: 20px;
-}
-h1 {
-	text-transform: uppercase;
-	font-family: 'Open Sans', sans-serif;
 }
 
 /* TABLE CSS */
@@ -285,4 +252,43 @@ tr:not(.table-head):hover {
 .row-selected {
 	background-color: rgba(110,72,181,0.3); /*rgba(101,195,209,0.5)*/
 	font-weight: bold;
+}
+
+/* TABLE HEADER HOVER TOOLTIP */
+a[bubbletooltip]:link, a[bubbletooltip]:visited {
+	text-decoration: none;
+	position: relative;
+	color: black;
+}
+a[bubbletooltip]:before {
+	content: "";
+	position: absolute;
+	border-bottom: 18px solid rgba(110,72,181,1);
+	border-left: 21px solid transparent;
+	border-right: 21px solid transparent;
+	visibility: hidden;
+	bottom: -20px;
+	left: -12px;
+}
+a[bubbletooltip]:after {
+	position: absolute;
+	content: attr(bubbletooltip);
+	color: #fffff;
+	font-weight:bold;
+	bottom: -35px;
+	left: -26px;
+	white-space: nowrap;
+	background: rgba(110,72,181,1);
+	padding: 5px 10px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius:6px;
+	-khtml-border-radius:6px;
+	border-radius: 6px;
+	visibility: hidden;
+}
+a[bubbletooltip]:hover:before, a[bubbletooltip]:hover:after {
+	visibility: visible;
+	-moz-transition: visibility 0s linear .3s;
+	font-weight: normal;
+	color: white;
 }
