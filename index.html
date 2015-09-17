@@ -238,6 +238,15 @@
 					window.location.href = "http://db.systemsbiology.net/MoritzInventory/";
 				}
 				closeWindow();
+				var search_bar_width = $('.header').width() - 180 - 10;
+				$('#search-name').css('width',search_bar_width);
+				$('#search-space').css('width',10);
+				$(window).resize(function() {
+					var search_bar_width = $('.header').width() - 180 - 10;
+					$('#search-name').css('width',search_bar_width);
+					$('#search-space').css('width',10);
+			//		$('#search-add-edit').css('width',500);
+				});
 			});
 		</script>
 		
@@ -343,8 +352,11 @@
 		<div class="container">
 			<div class="header">
 				<h1>Moritz Lab &ndash; Chemical Inventory</h1>
-				<input type="text" data-table="order-table" id="search-name" placeholder="Type here to search">
-				<button type="button" id="search-add-edit">Add/Edit Chemical</button>
+				<tr>
+					<td><input type="text" data-table="order-table" id="search-name" placeholder="Type here to search"></td>
+					<td id="search-space"></td>
+					<td><button type="button" id="search-add-edit">Add/Edit Chemical</button></td>
+				</tr>
 			</div>
 			
 			<div class="table">
