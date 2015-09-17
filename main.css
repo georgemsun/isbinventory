@@ -141,12 +141,15 @@ padding: 0px;
 	background-color: rgba(101,195,209,0.3);
 	color: white;
 }
-#search-name {	width: 70%;}
+#search-name {	/*width:68%;*/ }
 #search-cas {	width: 10%;}
 #search-location {	width: 15%;}
 #search-add-edit {
-	width: 200px;
+	width: 180px;
 	float: right;
+}
+#search-space {
+	width: 10px;
 }
 
 .fade {
